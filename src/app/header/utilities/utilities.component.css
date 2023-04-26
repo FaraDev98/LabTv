@@ -1,0 +1,39 @@
+input {
+    padding: var(--size3);
+    outline: none;
+    border: none;
+    border-bottom: var(--size4) solid var(--color1);
+    background-color: transparent;
+    width: 100%;
+}
+
+input:focus {
+    border-bottom: var(--size4) solid var(--color1);
+    background-color: var(--color2);
+}
+
+label {
+    display: block;
+}
+
+label[for="offcanvas-toggle"]::before {
+    content: "\61";
+}
+
+label[for="offcanvas-toggle"] {
+    display: block;
+}
+
+label[for="search"]::before {
+    content: "\6c";
+}
+
+.account a::before{
+    content: "\6d";
+}
+
+@media screen and (min-width: 680px) {
+    label[for="offcanvas-toggle"] {
+        display: none;
+    }
+}

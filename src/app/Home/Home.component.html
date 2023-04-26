@@ -1,0 +1,22 @@
+<div class="main-page">
+    <main>
+        <div class="backdrop flex-container flex-column justify-between"
+            [ngStyle]="{'background-image': 'url' + '(' + backdropPath + ')'}">
+
+            <div class="media-info flex-container flex-column justify-between">
+                <div>
+                    <h2>{{title | uppercase}}</h2>
+                    <hr>
+                    <span>{{genreStr}}</span>
+                </div>
+            </div>
+
+
+            <div class="trend-list">
+                <app-lista-media [isTrendList]="true" (selectedTrend)="getSelectedTrendOnChange($event)"
+                    class="daily-trend-list"></app-lista-media>
+            </div>
+            <div class="overlayer"></div>
+        </div>
+    </main>
+</div>

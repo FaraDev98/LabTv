@@ -1,0 +1,7 @@
+<div class="card">
+    <div class="card-img">
+        <img [src]="posterPath" [alt]="media?.media_type == 'movie' ? media?.title : media?.name"
+            [title]="media?.media_type == 'movie' ? media?.title : media?.name">
+    </div>
+    <app-score [media]="media" [height]="34" [width]="34"></app-score>
+</div>

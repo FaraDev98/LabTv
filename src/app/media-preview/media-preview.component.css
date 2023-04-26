@@ -1,0 +1,28 @@
+
+ img {
+    width: 100%;
+    border-radius: 5%;
+    height: 150px;
+ }
+
+.card {
+   position: relative;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.card:hover .card-img{
+  /* border: 0.0625em solid var(--color5); */
+  opacity: 0.5;
+  border-radius: 5%;
+}
+
+@media screen and (min-width: 680px) {
+  img{
+    height: 315px;
+  }
+}
+

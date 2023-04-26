@@ -1,0 +1,67 @@
+.main-wrapper {
+    overflow-x: hidden;
+}
+
+app-header {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+input {
+    display: none;
+}
+
+.offcanvas-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 50vW;
+    background-color: var(--color3);
+    z-index: 1;
+    border-right: 1px solid var(--color5);
+    transition: 0.5;
+    padding: var(--size3);
+    overflow: auto;
+}
+
+#offcanvas-toggle:checked + .offcanvas-menu {
+    left: 0;
+}
+
+#offcanvas-toggle:checked ~ .main-wrapper{
+    transform: translatex(50vW);
+    transition: 0.25s;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.overlayer {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color1);
+    opacity: 0.99;
+    z-index: 3;
+}
+
+#offcanvas-toggle:checked ~ .main-wrapper .overlayer{
+    display: block;
+}
+
+@media screen and (min-width: 380px) {
+
+    /* #offcanvas-toggle:checked ~ .main-wrapper {
+        transform: translatex(40vW);
+    }
+
+    .offcanvas-menu {
+        width: 40vW;
+    } */
+
+}
+

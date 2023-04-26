@@ -1,0 +1,19 @@
+<div class="slideshow">
+    <div class="toolbar" *ngIf="isTrendList">
+        <select name="trend" id="trends" [(ngModel)]="trend" (ngModelChange)="changeSelectedTrend()">
+            <option value="day">OGGI</option>
+            <option value="week">SETTIMANA</option>
+        </select>
+
+        <select name="trend" id="trends" [(ngModel)]="type" (ngModelChange)="changeSelectedTrend()">
+            <option value="all">TUTTI</option>
+            <option value="movie">FILM</option>
+            <option value="tv">SERIE TV</option>
+        </select>
+    </div>
+    <div class="slider">
+        <app-dettaglio-media class="item item_1" *ngFor="let m of results" [media]="m">lorem100</app-dettaglio-media>
+    </div>
+</div>
+
+<!-- <button (click)="move()">scroll</button> -->

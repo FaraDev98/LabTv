@@ -1,0 +1,19 @@
+IMDB APIs
+
+https://imdb-api.com/en/API/MostPopularMovies/k_hoxdpuia --> Most popular movies
+https://imdb-api.com/en/API/Title/k_hoxdpuia/{id} --> Dettaglio opera
+
+TMDB APIs
+https://api.themoviedb.org/3/trending/all/day?api_key=ed11fa9cc5bc3b3da0f6911a6aac8c7b --> trend del giorno
+https://api.themoviedb.org/3/trending/all/week?api_key=ed11fa9cc5bc3b3da0f6911a6aac8c7b --> trend della settimana
+https://api.themoviedb.org/3/genre/movie/list?api_key=ed11fa9cc5bc3b3da0f6911a6aac8c7b&language=en-US --> Generi US
+https://api.themoviedb.org/3/genre/movie/list?api_key=ed11fa9cc5bc3b3da0f6911a6aac8c7b&language=it --> Generi IT
+https://api.themoviedb.org/3/search/multi?api_key=ed11fa9cc5bc3b3da0f6911a6aac8c7b&language=en-US&query=<termini di ricerca(URI Encoded)>&page=1&include_adult=true
+
+https://api.themoviedb.org/3/discover/movie?api_key=ed11fa9cc5bc3b3da0f6911a6aac8c7b&language=en-US&region=us&sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_watch_monetization_types=flatrate --> ordinati per popolarità discendente
+
+https://image.tmdb.org/t/p/<size>/
+https://www.themoviedb.org/t/p/w1000_and_h450_multi_faces/
+https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/
+
+image sizes --> w300, w400, w500

@@ -1,0 +1,29 @@
+
+@import '../../../node_modules/reset-css/reset.css';
+
+:root {
+   --color1:  #0d1321;
+   --color2:  #1d2d44;
+   --color3:  #3e5c76;
+   --color4:  #748cab;
+   --color5:  #f0ebd8;
+   --default-color: #000;
+   --head-icon-color: #0d1321;
+   --head-icon-color-active: #f0ebd880;
+   --opacity-color-border:  #f0ebd833;
+
+   --size1: 1rem;
+   --size2: 0.625rem;
+   --size3: 0.3rem;
+   --size4: 0.0625rem;
+   --size5: 2rem;
+   --size6: 0.5rem;
+
+   --font-size-sm: 90%;
+   --font-size-md: 93%;
+   --font-size-lg: 95%;
+   --font-size-xl: 100%;
+}
+
+
+

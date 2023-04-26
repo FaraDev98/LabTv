@@ -1,0 +1,40 @@
+.slider {
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding-bottom: 0.3rem;
+}
+
+.item{
+  display: inline-block;
+  margin-right: 10px;
+  width: 100px;
+  height: 150px;
+}
+
+.slideshow {
+  position: relative;
+  padding: 1rem;
+}
+
+select {
+  background-color: transparent;
+  opacity: 0.8;
+  margin-bottom: 0.2em;
+  padding: 0.3em;
+  color: var(--color5);
+  border-color: transparent;
+  cursor: pointer;
+}
+
+
+select:hover {
+  background-color: var(--color1);
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 680px) {
+  .item{
+    width: 210px;
+    height: 315px;
+  }
+}

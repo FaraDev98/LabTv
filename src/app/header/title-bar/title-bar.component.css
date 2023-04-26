@@ -1,0 +1,51 @@
+a {
+    display: block;
+}
+
+.title-bar {
+    justify-content: flex-start;
+    /* padding: var(--size3); */
+    align-items: center;
+}
+
+.menu-collapsable {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+.social-bar-extend {
+    display: none;
+}
+
+input {
+    display: none;
+}
+
+label[for="flip-toggle"]::before {
+    content: "\70";
+}
+
+.title-bar div {
+    width: 100px;
+    margin-right: var(--size6);
+}
+
+@media screen and (min-width: 680px) {
+
+
+
+    .title-bar {
+        justify-content: space-between;
+        align-items: center;   
+    }
+
+    .menu-collapsable {
+        display: block;
+    }
+
+    
+
+}

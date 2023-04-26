@@ -1,0 +1,66 @@
+
+.main-page {
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+    z-index: 1;
+}
+
+h2 {
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+span {
+    opacity: 0.5;   
+}
+
+main {
+    height: 100%;
+}
+
+.backdrop {
+    background-position: center top;
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.trend-list {
+    z-index: 1;
+    width: 100%;
+    padding: 0.3rem;
+} 
+
+.toolbar {
+    z-index: 1;
+}
+
+.media-info {
+    z-index: 1;
+    padding: 1rem;
+    color: var(--color5);
+    text-align: center;
+}
+
+.overlayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(13,19,33, 0.9);
+    z-index: 0;
+}
+
+@media screen and (min-width: 680px) {
+    h2 {
+        font-size: 180%;
+    }
+
+    span {
+        font-size: 120%;
+    }
+
+}
+
