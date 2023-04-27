@@ -1,4 +1,5 @@
 <div class="main-page">
+
     <main>
         <div class="backdrop flex-container flex-column justify-between"
             [ngStyle]="{'background-image': 'url' + '(' + backdropPath + ')'}">
@@ -17,6 +18,9 @@
                     class="daily-trend-list"></app-lista-media>
             </div>
             <div class="overlayer"></div>
+        </div>
+        <div class="loading" *ngIf="isLoading">
+            <app-loader class="spinner"></app-loader>
         </div>
     </main>
 </div>

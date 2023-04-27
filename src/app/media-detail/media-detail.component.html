@@ -1,0 +1,81 @@
+<div class="media-wrapper">
+    <div class="loading" *ngIf="isLoading">
+        <app-loader class="spinner"></app-loader>
+    </div>
+
+    <section class="media-head-content backdrop"
+        [ngStyle]="{'background-image': 'url' + '(' + getBackdropPath() + ')'}">
+
+        <div class="poster-container">
+            <div class="poster">
+                <img [src]="getPosterPath()" alt="">
+            </div>
+        </div>
+
+        <div class="backdrop-over"></div>
+    </section>
+
+    <div class="detail-container">
+        <div class="detail-info left-col">
+            <h2 class="bold">{{mediaDetail?.title }}</h2>
+            <div class="release genres score flex-container justify-between align-center info-box">
+                <div class="release-date-duration-genres">
+                    <span class="bold">{{getReleaseInfo()}} &#8231;
+                        {{timeConversion()}}</span>
+                    <ul class="genres">
+                        <li *ngFor="let g of mediaDetail?.genres"><a routerLink="/all/{{g.id}}">{{g.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user-score">
+                    <app-score [vote]="mediaDetail!.vote_average" [height]="60" [width]="60" [fontsize]="'1.3rem'"
+                        class="canvas-container bold"></app-score>
+                </div>
+            </div>
+
+            <div class="media-toolbar">
+                <ul class="flex-container justify-between">
+                    <li [ngClass]="{'visible': !titleAdded}"><button title="aggiungi alla tua lista"
+                            (click)="addToList()"><span>Aggiungi</span></button>
+                    </li>
+                    <li [ngClass]="{'visible': titleAdded}" class="added">
+                        <button title="aggiunto"><span>Aggiunto</span></button>
+                    </li>
+                    <li *ngIf=" this.trailerPath"><button type="button"
+                            (click)="showTrailer()"><span>Trailer</span></button></li>
+                </ul>
+            </div>
+            <h3 *ngIf="mediaDetail?.tagline" class="tagline">{{mediaDetail?.tagline}}</h3>
+
+            <div class="overview" *ngIf="mediaDetail?.overview">
+                <h3 class="bold">DESCRIZIONE</h3>
+                <p>{{mediaDetail?.overview}}</p>
+            </div>
+
+            <div class="credits">
+                <div class="member" *ngFor="let m of CrewMembers">
+                    <h3 class="bold">{{m.name}}</h3>
+                    <ul class="member-jobs">
+                        <li *ngFor="let j of m.jobs">
+                            <span>{{j}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-col">
+            <div class="cast-wrapper" *ngIf="Cast">
+                <h3 class="bold">CAST</h3>
+                <app-cast-list [Cast]="Cast"></app-cast-list>
+            </div>
+
+            <div class="similar-wrapper" *ngIf="similarResults.length > 0">
+                <h3 class="bold">POTREBBE PIACERTI ANCHE ... </h3>
+                <app-similar-list [Similars]="similarResults"></app-similar-list>
+            </div>
+        </div>
+    </div>
+</div>
+<app-video [trailerPath]="trailerPath" id="trailer" *ngIf="showVideoComponent"
+    (onVideoClosing)="closeTrailer()"></app-video>

@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "LabTv:build:production",
+            "firebaseProject": "l4t--labtv",
+            "firebaseHostingSite": "l4t--labtv"
+          }
         }
       }
     }

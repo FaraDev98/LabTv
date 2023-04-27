@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "l4t--labtv": {
+      "hosting": {
+        "LabTv": [
+          "l4t--labtv"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "l4t--labtv"
+  }
+}

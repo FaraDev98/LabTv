@@ -14,7 +14,7 @@ li.flex-container, li a {
 }
 
 li.flex-container a {
-    border-bottom: var(--size4) var(--opacity-color-border) solid;
+    border-bottom: var(--size4) var(--opacity-color5) solid;
     padding: var(--size2);
     text-align: center;
 }

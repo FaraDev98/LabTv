@@ -1,28 +1,56 @@
+.card{
+  margin-right: 10px;
+  width: 120px;
+}
+
 
  img {
     width: 100%;
-    border-radius: 5%;
-    height: 150px;
+    border-radius: 10px;
+    aspect-ratio: 9/14;
  }
 
 .card {
    position: relative;
 }
 
-.card:hover {
-  transform: scale(1.01);
+.card a {
+  position: absolute;
+  top:0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
   cursor: pointer;
 }
 
-.card:hover .card-img{
-  /* border: 0.0625em solid var(--color5); */
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card:hover .card-img {
   opacity: 0.5;
   border-radius: 5%;
 }
 
+.canvas-container {
+   position: absolute;
+   left: 0;
+   top: 0;
+   background-color: rgb(51, 51, 51);
+   height: 34px;
+   width: 34px;
+   border-radius: 50%;
+}
+
 @media screen and (min-width: 680px) {
-  img{
-    height: 315px;
+
+  .card{
+    width: 210px;
+  }
+
+  h2 {
+    font-size: 100%;
   }
 }
 

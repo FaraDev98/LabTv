@@ -1,4 +1,2 @@
-<div class="canvas-container bold">
-    <span>{{input}}%</span>
-    <canvas #canvas id="myCanvas"></canvas>
-</div>
+<span [ngStyle]="{'line-height': height + 'px', 'font-size': fontsize}">{{input}}%</span>
+<canvas #canvas id="myCanvas"></canvas>

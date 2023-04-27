@@ -1,0 +1,9 @@
+<div class="overlayer-wrapper">
+    <div class="video-wrapper">
+        <button type="button" class="icon" (click)="closeVideoComponent()"></button>
+        <div class="video-container">
+            <iframe width="560" height="315" [src]="trailerPath | safe" frameborder="0" allowfullscreen
+                allow="accelerometer" autoplay></iframe>
+        </div><!-- /video-container -->
+    </div><!-- /video-wrapper -->
+</div>

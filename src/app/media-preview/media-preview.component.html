@@ -1,7 +1,16 @@
-<div class="card">
+<div class="card" *ngIf="media">
     <div class="card-img">
-        <img [src]="posterPath" [alt]="media?.media_type == 'movie' ? media?.title : media?.name"
-            [title]="media?.media_type == 'movie' ? media?.title : media?.name">
+        <img [src]="getPosterPath()" [alt]="media.title" [title]="media.title">
     </div>
-    <app-score [media]="media" [height]="34" [width]="34"></app-score>
+    <!-- <a routerLink="/{{media?.media_type}}/{{media?.id}}" *ngIf="media?.media_type == 'movie'"></a> -->
+    <a routerLink="/movies/{{media.id}}" (click)="sendDataToService()"></a>
+
+    <app-score [vote]="media.vote_average" [height]="34" [width]="34" [fontsize]="'0.7rem'"
+        class="canvas-container bold"></app-score>
 </div>
+
+<!-- /t/p/w116_and_h174_face/3PNftGpAkQJvDSX7XhCNJiNPFh8.jpg -->
+
+<!-- /t/p/w116_and_h174_face/3PNftGpAkQJvDSX7XhCNJiNPFh8.jpg -->
+
+<!-- /t/p/w300_and_h450_bestv2/3PNftGpAkQJvDSX7XhCNJiNPFh8.jpg -->

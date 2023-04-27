@@ -1,0 +1,24 @@
+<div class="main-wrapper">
+    <input type="text" id="search" name="search" autocomplete="false" placeholder="Titoli, Generi"
+        [(ngModel)]="searchTerm" (ngModelChange)="getResultsBySearch()">
+
+    <div class="results" *ngIf="searchResults.length > 0">
+        <ul>
+            <li *ngFor="let r of searchResults" class="flex-container info-box card">
+                <div class="card-img">
+                    <img [src]="getPosterPath(r)" alt="">
+                    <a routerLink="/movies/{{r.id}}"></a>
+                </div>
+                <div class="card-body flex-container flex-column align-start">
+                    <div class="card-title flex-container flex-column align-start">
+                        <h2><a href="" class="bold" routerLink="/movies/{{r.id}}">{{r.title}}</a></h2>
+                        <span class="release">{{r.release_date}}</span>
+                    </div>
+                    <div class="overview">
+                        <p>{{r.overview}}</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

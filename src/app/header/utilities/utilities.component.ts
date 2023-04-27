@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MediaService } from 'src/app/media.service';
 
 @Component({
   selector: 'app-utilities',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./utilities.component.css']
 })
 export class UtilitiesComponent {
+
+  searchTerm: string = "";
+
+  constructor(private mediaService: MediaService) { }
+
+
 
 }

@@ -1,0 +1,19 @@
+
+.cast-scroller {
+    margin-right: -10px;
+    padding: 0 1rem; 
+    padding-bottom: var(--size1);
+}
+
+.cast {
+    overflow-x: scroll;
+    align-items: stretch;
+    color: var(--color6);
+    padding: var(--size2) 0;
+    gap: 0;
+}
+
+.cast-member {
+    border-radius: 10px;
+    margin-right: 10px;
+}

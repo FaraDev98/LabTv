@@ -1,0 +1,38 @@
+
+.profile {
+    width: 110px;
+}
+
+.profile img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    aspect-ratio: 9/10;
+}
+
+.actor-info {
+    padding: var(--size2);
+}
+.actor-info h4 {
+    font-size: 70%;
+}
+
+.actor-info p {
+    font-size: 60%;
+}
+
+@media screen and (min-width: 1200px) {
+    .profile {
+        width: 150px;
+    }
+
+    .actor-info h4 {
+        font-size: 90%;
+    }
+
+    .actor-info p {
+        font-size: 80%;
+    }
+}

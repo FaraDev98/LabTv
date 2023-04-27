@@ -1,0 +1,68 @@
+<div class="flex-container">
+    <form [formGroup]="form" (ngSubmit)="register()">
+
+        <h2>Registrazione</h2>
+        <ul>
+            <li>
+                <label for="nome" class="bold">NOME</label>
+                <input type="text" name="nome" id="nome" formControlName="nome" placeholder="scrivi il tuo nome"
+                    autocomplete="false" ng-focus="{'onfocus = true'}">
+                <ul class="bold" *ngIf="form.get('nome')?.hasError && form.get('nome')?.touched">
+                    <li *ngIf="form.get('nome')?.hasError('required')"><span>Campo obbligatorio</span></li>
+                    <li>
+                        <span>{{errorRegexNome1}}</span>
+                    </li>
+                    <li><span>{{errorRegexNome0}}</span></li>
+                </ul>
+            </li>
+            <li>
+                <label for="email" class="bold">EMAIL</label>
+                <input type="text" name="email" id="email" formControlName="email" placeholder="scrivi la tua email"
+                    autocomplete="false">
+                <ul class="bold" *ngIf="form.get('email')?.hasError && form.get('email')?.touched">
+                    <li *ngIf="form.get('email')?.hasError('required')"><span>Campo obbligatorio</span></li>
+                    <li><span>{{errorRegexEmail0}}</span></li>
+                </ul>
+            </li>
+
+            <li>
+                <label for="password" class="bold">PASSWORD</label>
+                <input type="password" name="password" id="password" formControlName="password"
+                    placeholder="scrivi la tua Password" autocomplete="false">
+                <ul class="bold" *ngIf="form.get('password')?.hasError && form.get('password')?.touched">
+                    <li *ngIf="form.get('password')?.hasError('required')"><span>Campo obbligatorio</span></li>
+                    <li><span>{{errorRegexPassword0}}</span></li>
+                    <li><span>{{errorRegexPassword1}}</span></li>
+                    <li><span>{{errorRegexPassword2}}</span></li>
+                    <li><span>{{errorRegexPassword3}}</span></li>
+                </ul>
+            </li>
+
+            <li>
+                <label for="ripetiPassword" class="bold">RIPETI PASSWORD</label>
+                <input type="password" name="ripetiPassword" id="ripetiPassword" formControlName="ripetiPassword"
+                    placeholder="ripeti la password" autocomplete="false">
+                <ul class="bold" *ngIf="form.get('ripetiPassword')?.hasError && form.get('ripetiPassword')?.touched">
+                    <li *ngIf="form.get('ripetiPassword')?.hasError('required')"><span>Campo obbligatorio</span></li>
+                    <li *ngIf="form.get('ripetiPassword')?.hasError('notEquals')"><span>Le Password non
+                            coincidono</span></li>
+                </ul>
+            </li>
+
+            <li>
+                <input type="checkbox" name="privacy" id="privacy" formControlName="privacy">
+                <label for="privacy" class="bold">Accetto l'informativa sulla privacy</label>
+                <ul class="bold" *ngIf="form.get('privacy')?.invalid && form.get('privacy')?.touched">
+                    <li><span>Accettare l'informativa sulla
+                            privacy</span></li>
+                </ul>
+            </li>
+        </ul>
+
+
+        <button type="submit" class="bold" [ngClass]="{'disabled':  form.invalid }">Registrati
+            ora!</button>
+
+        <a routerLink="/forms/login" class="bold">sei già registrato? effettua il login</a>
+    </form>
+</div>

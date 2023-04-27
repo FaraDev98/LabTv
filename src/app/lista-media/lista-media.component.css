@@ -2,18 +2,22 @@
   overflow-x: scroll;
   white-space: nowrap;
   padding-bottom: 0.3rem;
+
 }
 
 .item{
   display: inline-block;
-  margin-right: 10px;
-  width: 100px;
-  height: 150px;
+  /* margin-right: 10px;
+  width: 110px;
+  min-width: 110px;
+  height: 170px; */
 }
 
 .slideshow {
   position: relative;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  margin-right: -10px;
+  color: var(--color6);
 }
 
 select {
@@ -26,6 +30,21 @@ select {
   cursor: pointer;
 }
 
+.title {
+  padding: var(--size3);
+  font-size: 90%;
+}
+
+.title a {
+  color: var(--color6);
+  display: block;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.title a:hover {
+  color: var(--opacity-color3);
+}
 
 select:hover {
   background-color: var(--color1);
@@ -33,8 +52,9 @@ select:hover {
 }
 
 @media screen and (min-width: 680px) {
-  .item{
-    width: 210px;
-    height: 315px;
+
+  .title {
+    font-size: 120%;
   }
 }
+

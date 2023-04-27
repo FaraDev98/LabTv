@@ -1,0 +1,7 @@
+<div class="cast-scroller">
+    <ul class="cast flex-container">
+        <li *ngFor="let c of Cast" class="cast-member info-box">
+            <app-cast-preview [Actor]="c"></app-cast-preview>
+        </li>
+    </ul>
+</div>

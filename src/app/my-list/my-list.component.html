@@ -1,0 +1,11 @@
+<div class="main-wrapper">
+    <div class="myTitles" *ngIf="isAuthenticated">
+        <app-single-title *ngFor="let m of media" [title]="m" class="item" (onDeleted)="onDeletedElement($event)"
+            [isWishlist]="true"></app-single-title>
+    </div>
+    <form class="not-auth" *ngIf="!isAuthenticated">
+        <!-- <h2 class="bold">AUTENTICAZIONE RICHIESTA</h2> -->
+        <button class="bold" routerLink="/authentication/login">EFFETTUA IL LOGIN</button>
+    </form>
+</div>
+<!-- (click)="register() -->

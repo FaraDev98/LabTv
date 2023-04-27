@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu-collapsable',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class MenuCollapsableComponent {
 
+
+  @Output()
+  onChangeRoute = new EventEmitter<boolean>()
+
+  closeMenu() {
+    this.onChangeRoute.emit(false);
+  }
 }
+
+

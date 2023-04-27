@@ -1,0 +1,10 @@
+<div class="card" *ngIf="title">
+    <div class="card-img">
+        <img [src]="getPosterPath()" alt="">
+        <a routerLink="/movies/{{title!.id}}"></a>
+    </div>
+    <div class="card-tools flex-container justify-between info-box" *ngIf="isWishlist">
+        <button id="buy" class="bold" title="acquista"></button>
+        <button id="remove" title="rimuovi" (click)="deleteFromList()"></button>
+    </div>
+</div>

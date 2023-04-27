@@ -5,20 +5,8 @@
    bottom: 0;
 }
 
-.canvas-container {
-   position: absolute;
-   left: 0;
-   top: 0;
-   background-color: rgb(51, 51, 51);
-   height: 34px;
-   width: 34PX;
-   border-radius: 50%;
-}
-
-.canvas-container span {
+span {
    display: block;
-   line-height: 34px;
    text-align: center;
-   font-size: 0.7rem;
    color: var(--color5);
 }

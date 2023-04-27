@@ -1,0 +1,12 @@
+<div class="similar-scroller">
+    <ul class="similar flex-container">
+        <li *ngFor="let s of Similars" class="similar-movie">
+            <a routerLink="/movies/{{s.id}}">
+                <div class="backdrop">
+                    <img [src]="getBackdropPath(s)" alt="">
+                </div>
+                <h4 class="bold">{{s.title}}</h4>
+            </a>
+        </li>
+    </ul>
+</div>

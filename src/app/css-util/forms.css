@@ -1,0 +1,142 @@
+/* .form-wrapper {
+    height: calc(100vh - 50px);
+    max-width: 500px;
+    margin: 0px auto 0 auto;
+    color: var(--color6);
+} */
+
+form {
+    /* border: .0625em solid lightgrey; */
+    padding: 1.25em;
+    letter-spacing: .05em;
+    flex: 1 1 320px;
+}
+
+form h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+form ul, form li, form label, form input, form textarea, ul li span, form button, form a {
+    width: 100%;    
+    list-style-type: none;
+    display: block;
+}
+
+form input, form textarea {
+    border: .0625em solid rgb(0, 0, 0);
+    background: rgb(29, 45, 68);
+    outline: none;    
+    padding: .3125em;
+    font-size: 1.2em;
+    margin-bottom: .3125em;
+    color: rgb(240, 235, 216);
+}
+
+form textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 200px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: rgb(240, 235, 216) !important;
+}
+
+
+form input[type="checkbox"]{
+    width: auto;
+    accent-color: rgb(0, 126, 19);
+}
+
+form label[for="privacy"], form label[for="ricordaPass"], form input[type="checkbox"] {
+    display: inline;
+}
+
+form input:focus, form textarea:focus {
+    background:rgba(116, 140, 171, 0.5);
+    border: 1px solid rgb(116, 140, 171);
+}
+
+form input.errore, form textarea.errore {
+    background:rgba(255, 64, 64, 0.2);
+    border: 1px solid rgb(194, 57, 57); 
+}
+
+form input.errore ~ ul li span, form textarea.errore ~ ul li span {
+    color: rgb(194, 57, 57);
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+form label {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+form button, form a {
+    border-radius: 5px;
+}
+
+form button {
+    padding: .625em 0;
+    margin-top: 15px;
+    background: rgb(29, 45, 68);
+    color: rgb(240, 235, 216);
+    border: .0625em solid rgb(141, 141, 141);
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+form button:hover {
+    border-color: rgb(51, 51, 51);
+    color: rgb(13, 19, 33);;
+    background:rgba(116, 140, 171, 0.5); 
+}
+
+form a {
+    border: .125em solid rgb(141, 141, 141);
+    text-align: center;
+    padding: .3125em;
+    color: rgb(240, 235, 216);
+    background: rgb(62, 92, 118);
+    font-size: .8em;
+}
+
+form a:hover {
+    background: rgba(240, 235, 216, 0.5);
+    color: rgb(13, 19, 33);
+}
+
+form input.ng-invalid.ng-touched, form textarea.ng-invalid.ng-touched {
+    background:rgba(255, 64, 64, 0.2);
+    border: 1px solid rgb(194, 57, 57); 
+}
+
+form input.ng-invalid.ng-touched ~ ul li span, form textarea.ng-invalid.ng-touched ~ ul li span {
+    color: rgb(194, 57, 57);
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+form button.disabled:hover {
+    background: rgb(29, 45, 68);
+    color: rgb(240, 235, 216);
+    border: .0625em solid rgb(141, 141, 141);
+    cursor: not-allowed;
+}

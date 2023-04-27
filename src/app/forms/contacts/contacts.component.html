@@ -1,0 +1,76 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <h2>Contattaci per informazioni</h2>
+
+    <ul>
+
+        <li>
+            <label for="nome" class="bold">NOME</label>
+            <input type="text" name="nome" id="nome" formControlName="nome" placeholder="scrivi il tuo nome"
+                autocomplete="false" ng-focus="{'onfocus = true'}">
+            <ul class="bold" *ngIf="form.get('nome')?.hasError && form.get('nome')?.touched">
+                <li *ngIf="form.get('nome')?.hasError('required')"><span>Campo obbligatorio</span></li>
+                <li>
+                    <span>{{errorRegexNome1}}</span>
+                </li>
+                <li><span>{{errorRegexNome0}}</span></li>
+            </ul>
+        </li>
+
+        <li>
+            <label for="cognome" class="bold">COGNOME</label>
+            <input type="text" name="cognome" id="cognome" formControlName="cognome" placeholder="scrivi il tuo cognome"
+                autocomplete="false">
+            <ul class="bold" *ngIf="form.get('cognome')?.hasError && form.get('cognome')?.touched">
+                <li *ngIf="form.get('cognome')?.hasError('required')"><span>Campo obbligatorio</span></li>
+                <li>
+                    <span>{{errorRegexCognome1}}</span>
+                </li>
+                <li><span>{{errorRegexCognome0}}</span></li>
+            </ul>
+        </li>
+
+        <li>
+            <label for="email" class="bold">EMAIL</label>
+            <input type="text" name="email" id="email" formControlName="email" placeholder="scrivi la tua email"
+                autocomplete="false">
+            <ul class="bold" *ngIf="form.get('email')?.hasError && form.get('email')?.touched">
+                <li *ngIf="form.get('email')?.hasError('required')"><span>Campo obbligatorio</span></li>
+                <li><span>{{errorRegexEmail0}}</span></li>
+            </ul>
+        </li>
+
+        <li>
+            <label for="telefono" class="bold">NUMERO DI TELEFONO</label>
+            <input type="text" name="telefono" id="telefono" formControlName="telefono"
+                placeholder="scrivi il tuo numero">
+            <ul class="bold" *ngIf="form.get('telefono')?.hasError && form.get('telefono')?.touched">
+                <li *ngIf="form.get('telefono')?.hasError('required')"><span>Campo obbligatorio</span></li>
+                <li><span>{{errorRegexTelefono0}}</span></li>
+            </ul>
+        </li>
+
+        <li>
+            <label for="messaggio" class="bold">SCRIVI QUI IL TUO MESSAGGIO</label>
+            <textarea name="messaggio" id="messaggio" formControlName="messaggio">
+            </textarea>
+            <ul class="bold" *ngIf="form.get('messaggio')?.hasError && form.get('messaggio')?.touched">
+                <li *ngIf="form.get('messaggio')?.hasError('required')"><span>Campo obbligatorio</span></li>
+                <li><span>{{errorRegexMessaggio0}}</span></li>
+            </ul>
+        </li>
+
+
+        <li>
+            <input type="checkbox" name="privacy" id="privacy" formControlName="privacy">
+            <label for="privacy" class="bold">Accetto l'informativa sulla privacy</label>
+            <ul class="bold" *ngIf="form.get('privacy')?.invalid && form.get('privacy')?.touched">
+                <li><span>Accettare l'informativa sulla
+                        privacy</span></li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <button type="submit" class="bold" [ngClass]="{'disabled': form.invalid}">Invia</button>
+</form>

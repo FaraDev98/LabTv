@@ -5,21 +5,16 @@
     </div>
 
     <ul class="flex-container flex-column justify-center">
-        <li class="flex-container"><a routerLink="" class="bold icon-color" routerLinkActive="active">Home</a>
+        <li class="flex-container"><a routerLink="/home" class="bold icon-color" (click)="closeMenu()">Home</a>
         </li>
-        <li class="flex-container"><a href="src/html/contatti.html" class="bold icon-color">Serie
-                TV</a></li>
-        <li class="flex-container"><a href="src/html/LoginForm.html" class="bold icon-color">Film</a>
+        <li class="flex-container"><a routerLink="/movies" class="bold icon-color" (click)="closeMenu()">Film</a>
         </li>
-        <li class="flex-container"><a href="src/html/LoginForm.html" class="bold icon-color">La
+        <li class="flex-container"><a routerLink="/myList" class="bold icon-color" (click)="closeMenu()">La
                 mia
                 lista</a>
         </li>
-        <li class="flex-container"><a href="src/html/LoginForm.html" class="bold icon-color">Contatti</a>
-        </li>
-
-        <li>
-
+        <li class="flex-container"><a routerLink="/forms/contacts" class="bold icon-color"
+                (click)="closeMenu()">Contatti</a>
         </li>
     </ul>
 </div>

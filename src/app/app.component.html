@@ -1,10 +1,11 @@
-<input type="checkbox" id="offcanvas-toggle">
+<input type="checkbox" id="offcanvas-toggle" #toggle>
 
-<app-menu-collapsable class="flex-container flex-column  offcanvas-menu"></app-menu-collapsable>
+<app-menu-collapsable class="flex-container flex-column  offcanvas-menu"
+    (onChangeRoute)="closeMenu($event)"></app-menu-collapsable>
 
 <div class="main-wrapper">
     <label for="offcanvas-toggle" class="overlayer"></label>
     <app-header></app-header>
-    <router-outlet></router-outlet>
+    <router-outlet class="outlet"></router-outlet>
     <app-footer></app-footer>
 </div>

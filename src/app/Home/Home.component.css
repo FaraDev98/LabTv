@@ -1,7 +1,7 @@
 
 .main-page {
     margin-top: 50px;
-    height: calc(100vh - 50px);
+    height: calc(99vh - 50px);
     z-index: 1;
 }
 
@@ -19,6 +19,7 @@ main {
 }
 
 .backdrop {
+    position: relative;
     background-position: center top;
     background-attachment: scroll;
     background-size: cover;
@@ -53,6 +54,23 @@ main {
     z-index: 0;
 }
 
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background:var(--color1);
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @media screen and (min-width: 680px) {
     h2 {
         font-size: 180%;
@@ -60,6 +78,12 @@ main {
 
     span {
         font-size: 120%;
+    }
+
+    .main-page {
+        margin-top: 50px;
+        height: calc(100vh - 50px);
+        z-index: 1;
     }
 
 }

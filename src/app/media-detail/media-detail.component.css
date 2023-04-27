@@ -1,0 +1,295 @@
+.media-wrapper {
+    margin-top: 50px;
+    color: var(--color6);
+    /* margin-bottom: 200px; */
+    position: relative;
+}
+
+.media-head-content {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+.poster-container {
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.backdrop {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    /* width: 100vw; */
+}
+
+.backdrop-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(13,19,33);
+    background: linear-gradient(0deg, rgba(13,19,33,1) 1%, rgba(13,19,33,0.31416316526610644) 100%);
+    z-index: 0;
+}
+
+.poster {
+    position: relative;
+    width: 170px;
+    padding: 1em;
+    z-index: 1;
+}
+
+.poster img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.detail-container {
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.detail-info {
+    text-align: center;
+    padding: var(--size1);
+}
+
+.detail-info h2 {
+    text-transform: uppercase;
+}
+
+.media-toolbar {
+    margin-top: var(--size1);
+    padding: var(--size3) 0;
+}
+
+.media-toolbar li {
+    margin-right: var(--size3);
+}
+
+.media-toolbar li button {
+    display: block;
+    color: var(--color6);
+    width: 100%;
+    font-size: 150%;
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.media-toolbar li.added button, .media-toolbar li.added span {
+    color: rgb(15, 100, 15);
+}
+
+.media-toolbar li:first-of-type {
+    display: none;
+}
+
+.media-toolbar li.added {
+    display: none;
+}
+
+.media-toolbar li:first-of-type button::before {
+    font-family: LabTv;
+    content: "\69"
+}
+
+.media-toolbar li.added button::before {
+    font-family: LabTv;
+    content: "\76"
+}
+
+.media-toolbar li:nth-of-type(3) button::before {
+    font-family: LabTv;
+    content: "\62"
+}
+
+.release {
+    margin: var(--size1) 0;
+    border-radius: 10px;
+    padding: var(--size2);
+}
+
+.genres li,
+.member-jobs li {
+    display: inline-block;
+    opacity: 0.6;
+    margin-right: var(--size3);
+}
+
+.genres li a {
+    color: var(--color6);
+    font-size: 85%;
+}
+
+.genres li a:hover {
+    color: var(--opacity-color4);
+}
+
+.genres li::after,
+.member-jobs li::after {
+    content: ","
+}
+
+.genres li:last-of-type::after,
+.member-jobs li:last-of-type::after {
+    content: ""
+}
+
+
+.media-toolbar li span {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--color6);
+    padding-top: var(--size2);
+    line-height: 100%;
+}
+
+.overview {
+    text-align: left;
+    padding: var(--size1) 0;
+    font-size: 80%;
+}
+
+.canvas-container {
+   display: block;
+   background-color: rgb(51, 51, 51);
+   height: 60px;
+   width: 60px;
+   border-radius: 50%;
+   position: relative;
+}
+
+.tagline {
+    font-style: italic;
+    text-align: left;
+    margin: var(--size1) 0;
+    opacity: 0.7;
+}
+
+.credits {
+    text-align: left;
+    margin: var(--size1) 0 0 0;
+    /* flex-wrap: wrap; */
+}
+
+.member {
+    display: inline-block;
+    width: calc(100% / 2);
+    margin: var(--size1) 0;
+}
+
+.member h3 {
+    font-size: 80%;
+}
+
+.member ul {
+    font-size: 50%;
+}
+
+.similar-wrapper h3, .cast-wrapper h3 {
+    padding: 0 var(--size1);
+}
+
+.similar-wrapper {
+    padding: var(--size1) 0;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background:var(--color1);
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.media-toolbar li.visible {
+    display: block;
+}
+
+
+@media screen and (min-width: 380px) {
+    .member h3 {
+        font-size: 90%;
+    }
+
+    .member ul {
+        font-size: 70%;
+    }
+
+    .overview {
+        font-size: 90%;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .member h3 {
+        font-size: 100%;
+    }
+
+    .member ul {
+        font-size: 90%;
+    }
+
+    .overview {
+        font-size: 120%;
+    }
+
+    .poster {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 924px) {
+    .poster {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .media-toolbar li button {
+        font-size: 200%;
+    }
+
+    .media-toolbar li span {
+        font-size: 1rem;
+    }
+
+    .tagline {
+        font-size: 120%;
+    }
+
+    .release {
+        font-size: 120%;
+    }
+
+    .genres li a {
+        font-size: 90%;
+    }
+
+}
+/* 
+@media screen and (min-width: 1450px) {
+    .poster {
+        width: 500px;
+    }
+} */
+
+
+
+
+
+

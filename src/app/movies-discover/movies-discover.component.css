@@ -1,0 +1,27 @@
+.main-wrapper {
+    margin-top: 80px;
+    color: var(--color6);
+    /* margin-bottom: 200px; */
+    position: relative;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background:var(--color1);
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hide {
+    visibility: hidden;
+}

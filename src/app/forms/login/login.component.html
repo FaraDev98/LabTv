@@ -1,0 +1,37 @@
+<div class="flex-container">
+
+
+    <form [formGroup]="form" (ngSubmit)="login()">
+
+        <h2>login</h2>
+        <ul>
+
+            <li>
+                <label for="email" class="bold">EMAIL</label>
+                <input type="text" name="email" id="email" formControlName="email" placeholder="scrivi la tua email"
+                    autocomplete="false">
+                <ul class="bold" *ngIf="form.get('email')?.hasError && form.get('email')?.touched">
+                    <li *ngIf="form.get('email')?.hasError('required')"><span>Campo obbligatorio</span></li>
+                    <li><span>{{errorRegexEmail0}}</span></li>
+                </ul>
+            </li>
+
+            <li>
+                <label for="password" class="bold">PASSWORD</label>
+                <input type="password" name="password" id="password" formControlName="password"
+                    placeholder="scrivi la tua Password" autocomplete="false">
+                <ul class="bold" *ngIf="form.get('password')?.hasError && form.get('password')?.touched">
+                    <li *ngIf="form.get('password')?.hasError('required')"><span>Campo obbligatorio</span></li>
+                    <li><span>{{errorRegexPassword0}}</span></li>
+                    <li><span>{{errorRegexPassword1}}</span></li>
+                    <li><span>{{errorRegexPassword2}}</span></li>
+                    <li><span>{{errorRegexPassword3}}</span></li>
+                </ul>
+            </li>
+        </ul>
+        <button class="bold" [ngClass]="{'disabled': form.invalid }">Accedi</button>
+
+        <a routerLink="/forms/registration" class="bold">non sei ancora registrato? clicca qui</a>
+    </form>
+
+</div>

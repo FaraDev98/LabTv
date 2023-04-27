@@ -39,7 +39,9 @@ html {
 }
 
 .icon-color {
-    color: var(--head-icon-color);
+    /* color: var(--head-icon-color); */
+    color: var(--color6);
+
 }
 
 .icon-color:hover {
@@ -105,9 +107,10 @@ html {
     align-items: flex-end;
 }
 
-/* .font-responsive {
-    font-size: 1rem;
-} */
+.info-box {
+    background-color: rgb(51, 51, 51, 0.6);
+    text-align: left;
+}
 
 *::-webkit-scrollbar {
     width: 5px;

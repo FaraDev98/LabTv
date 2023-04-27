@@ -1,0 +1,6 @@
+.main-wrapper {
+    margin-top: 50px;
+    color: var(--color6);
+    padding: var(--size2);
+    position: relative;
+}

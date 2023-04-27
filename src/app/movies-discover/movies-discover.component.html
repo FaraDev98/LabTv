@@ -1,0 +1,7 @@
+<div class="main-wrapper">
+    <app-genres-preview (onLoadingComponent)="subComponentLoaded()"
+        [ngClass]="{'hide': isLoading}"></app-genres-preview>
+    <div class="loading" *ngIf="isLoading">
+        <app-loader class="spinner"></app-loader>
+    </div>
+</div>

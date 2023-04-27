@@ -1,5 +1,5 @@
 footer {
-    padding: 20px;
+    padding: 30px;
     background: var(--color1);
-    border-top: 0.01em solid rgb(62, 92, 118);
+    border-top: 0.01em solid var(--color3);
 }

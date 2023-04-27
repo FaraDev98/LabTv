@@ -1,23 +1,31 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Media } from '../models/media-detail';
 import { MediaService } from '../media.service';
-import { Genre, GenreResponse } from '../models/genres';
-import { Observable } from 'rxjs';
+import { Genre } from '../models/genres';
+
 
 @Component({
   selector: 'app-catalogo',
   templateUrl: './Home.component.html',
   styleUrls: ['./Home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, AfterViewInit {
 
 
   title?: string = "";
   backdropPath?: string;
   genreStr: string = "";
-
+  isLoading: Boolean = false;
 
   constructor(private mediaService: MediaService) { }
+  ngOnInit(): void {
+    this.isLoading = true;
+  }
+
+  /* FUNZIONE INIZIALIZZAZIONE COMPLETATA */
+  ngAfterViewInit() {
+    setTimeout(() => this.isLoading = false, 500);
+  } //ngAfterViewInit
 
   getSelectedTrendOnChange(trendSelected: Media[]) {
     if (trendSelected) {
@@ -28,9 +36,9 @@ export class HomeComponent {
         this.title = trendSelected[0].name;
       }
 
-      console.log(trendSelected[0]);
       this.getBackdropPath(trendSelected[0].backdrop_path);
       this.getGenresList(trendSelected[0])
+      // this.isLoading = false;
     }
 
   }
@@ -45,7 +53,7 @@ export class HomeComponent {
   }
 
   getGenresList(media: Media) {
-    this.mediaService.getGenres(media.media_type)
+    this.mediaService.getGenres()
       .subscribe(res => {
         this.getMediaGenresByIds(media, res.genres);
       });

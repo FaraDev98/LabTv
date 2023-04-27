@@ -12,30 +12,38 @@ export class ListaMediaComponent implements OnInit {
   constructor(private mediaService: MediaService) { }
 
   trend: string = "day";
-  type: string = "movie";
 
-  ngOnInit(): void {
-    this.getTrends(this.type, this.trend)
-  }
-
+  @Input()
   results: Media[] = [];
 
   @Input()
   isTrendList: Boolean = false;
 
-  @Output()
-  selectedTrend = new EventEmitter<Media[]>
+  @Input()
+  genre: string = "";
 
-  getTrends(type: string, trend: string) {
-    this.mediaService.getTrends(type, trend)
-      .subscribe(res => {
-        this.results = res.results;
-        this.selectedTrend.emit(this.results);
-      });
+  @Input()
+  genreId: number = 0;
+
+  @Output()
+  selectedTrend = new EventEmitter<Media[]>()
+
+  ngOnInit(): void {
+    this.getTrends(this.trend)
+  }
+
+  getTrends(trend: string) {
+    if (this.isTrendList) {
+      this.mediaService.getTrends(trend)
+        .subscribe(res => {
+          this.results = res.results;
+          this.selectedTrend.emit(this.results);
+        });
+    }
   }
 
   changeSelectedTrend() {
-    this.getTrends(this.type, this.trend);
+    this.getTrends(this.trend);
   }
 
 

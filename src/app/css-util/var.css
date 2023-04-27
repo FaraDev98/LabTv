@@ -7,10 +7,16 @@
    --color3:  #3e5c76;
    --color4:  #748cab;
    --color5:  #f0ebd8;
+   --color6: rgb(210, 210, 210);
    --default-color: #000;
    --head-icon-color: #0d1321;
    --head-icon-color-active: #f0ebd880;
-   --opacity-color-border:  #f0ebd833;
+
+   --opacity-color1:  #f00d1321;
+   --opacity-color2:  #f01d2d44;
+   --opacity-color3:  #f03e5c76;
+   --opacity-color4:  #f0748cab;
+   --opacity-color5:  #f0ebd833;
 
    --size1: 1rem;
    --size2: 0.625rem;
